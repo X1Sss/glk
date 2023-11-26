@@ -24,8 +24,10 @@ class generate_circles(QtWidgets.QMainWindow):
             painter.setRenderHint(QPainter.Antialiasing)
             painter.setBrush(QBrush(Qt.yellow, Qt.SolidPattern))
             for a in range(random.randint(1, 10)):
-                painter.drawEllipse(random.randint(0, 400), random.randint(0, 400),
-                                    random.randint(0, 400), random.randint(0, 400))
+                first_point = random.randint(-100, 400)
+                second_point = random.randint(-100, 400)
+                lenght = random.randint(0, 400)
+                painter.drawEllipse(first_point, second_point, lenght, lenght)
 
     def paintcircle(self):
         self.should_paint_circle = True
